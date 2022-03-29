@@ -38,31 +38,34 @@ public class LionTest {
 
     @Test
     public void doesHaveManeEmptyExceptionTest() throws Exception {
-        Lion lion = new Lion(" ", feline);
         try {
+            Lion lion = new Lion(" ", feline);
             lion.doesHaveMane();
         } catch (Exception exception) {
-            System.out.println("Используйте допустимые значения пола животного - самец или самка");
+            String expectedMessage = "Используйте допустимые значения пола животного - самец или самка";
+            assertEquals("Messages should be similar", expectedMessage, exception.getMessage());
         }
     }
 
     @Test
     public void doesHaveManeWrongTextExceptionTest() throws Exception {
-        Lion lion = new Lion("львенок", feline);
         try {
+            Lion lion = new Lion("львенок", feline);
             lion.doesHaveMane();
         } catch (Exception exception) {
-            System.out.println("Используйте допустимые значения пола животного - самец или самка");
+            String expectedMessage = "Используйте допустимые значения пола животного - самец или самка";
+            assertEquals("Messages should be similar", expectedMessage, exception.getMessage());
         }
     }
 
     @Test
     public void doesHaveManeNumbersExceptionTest() throws Exception {
-        Lion lion = new Lion("1234", feline);
         try {
+            Lion lion = new Lion("1234", feline);
             lion.doesHaveMane();
         } catch (Exception exception) {
-            System.out.println("Используйте допустимые значения пола животного - самец или самка");
+            String expectedMessage = "Используйте допустимые значения пола животного - самец или самка";
+            assertEquals("Messages should be similar", expectedMessage, exception.getMessage());
         }
     }
 }

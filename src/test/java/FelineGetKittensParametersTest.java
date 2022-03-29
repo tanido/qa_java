@@ -17,7 +17,7 @@ public class FelineGetKittensParametersTest {
         this.expectedCount = expectedCount;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "Тестовые данные: {0} = {1}")
     public static Object[][] getKittens() {
         return new Object[][] {
             {1, 1},
